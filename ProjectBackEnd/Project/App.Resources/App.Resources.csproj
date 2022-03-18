@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="App.Domain\Quiz.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+          <LastGenOutput>Quiz.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App.BLL.DTO\FileType.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>FileType.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="App.Domain\Quiz.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Quiz.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App.BLL.DTO\FileType.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>FileType.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>

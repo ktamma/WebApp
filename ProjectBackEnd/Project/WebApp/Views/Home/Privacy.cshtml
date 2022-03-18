@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+@foreach (var claim in User.Claims)
+{
+   @claim.Type 
+}
+JWT
+@Base.Extensions.IdentityExtensions.GenerateJwt(User.Claims, "asdfghjklkjhgfdfghjkjhgfghb.,.,",
+    "itcollege.taltech.ee", "itcollege.taltech.ee", DateTime.Now.AddDays(30))
